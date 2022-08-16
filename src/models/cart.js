@@ -17,8 +17,13 @@ const cartSchema = new mongoose.Schema(
       },
     ],
     email:{ type: String, require: true },
-    direccion: [{ type: String, require: true }],
-
+    direccion: { 
+      calle: {type: String ,required: true },
+      altura: {type: Number, required: true},
+      cp: {type: Number,required: true},
+      piso: {type: Number},
+      departamento: {type: String}
+    }
   },
   { versionKey: false, timestamps:true }
 );

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { pictureCollectionName } from "./pictures";
 
 export const productCollection = "products";
 
@@ -8,7 +9,14 @@ const ProductSchema = new mongoose.Schema(
     descripcion: { type: String, required: true },
     precio: { type: Number, required: true },
     stock: { type: Number, require: true },
-    foto: { type: String, required: true },
+    fotos: [
+      {
+        id: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: pictureCollectionName,
+        },
+      },
+    ],
     categoryId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: categoryCollectionName,
