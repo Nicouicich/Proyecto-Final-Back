@@ -1,19 +1,39 @@
 {
-  "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.18.10",
-    "@babel/node": "^7.18.10",
-    "nodemon": "^2.0.19"
+  "name": "backend-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "nodemon index.js",
+    "start": "node ./index.js"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@babel/preset-env": "^7.18.10",
     "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.4.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "mongoose": "^6.5.0",
-    "Router": "^2.1.0",
-    "socket.io": "^4.5.1",
-    "socket.io-client": "^4.5.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.14",
+    "morgan": "^1.10.0",
+    "node-emoji": "^1.11.0",
+    "nodemailer": "^6.7.2",
+    "passport": "^0.5.0",
+    "passport-jwt": "^4.0.0",
+    "socket.io": "^4.4.1",
+    "validator": "^13.7.0",
+    "winston": "^3.3.3",
+    "ws": "^8.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "jest": "^27.4.2",
+    "nodemon": "^2.0.15"
   }
 }
